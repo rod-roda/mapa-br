@@ -42,7 +42,7 @@ function AsciiBar({ value, total, width = 24 }: { value: number; total: number; 
 // Intensidade da opção: 2 barras acesas para "totalmente", 1 para "em parte"
 function Scale({ value }: { value: number }) {
   return (
-    <span aria-hidden className="hidden sm:inline-flex gap-[3px] items-end shrink-0">
+    <span aria-hidden className="inline-flex gap-[3px] items-end shrink-0">
       {[-2, -1, 0, 1, 2].map((k) => {
         const on = value === 0 ? k === 0 : Math.sign(k) === Math.sign(value) && Math.abs(k) <= Math.abs(value);
         return (
